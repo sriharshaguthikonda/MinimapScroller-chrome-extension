@@ -63,7 +63,7 @@ Thanks to the strip, open the mini map only when you need it.
 
 
 
-## Acknowledgements
+## Download
 
 - [Chrome Store](https://chromewebstore.google.com/detail/minimap-scroller/gchpemfjngonblllebgljnaaboembklm) - Download now!
 

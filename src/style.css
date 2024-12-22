@@ -37,9 +37,6 @@
 	
 	cursor: pointer;
 }
-#dom-minimap-container:hover, #languette:hover + #dom-minimap-container {
-	right: 0px;
-}
 
 #dom-minimap, #dom-scrollbox {
   width: 100%;
