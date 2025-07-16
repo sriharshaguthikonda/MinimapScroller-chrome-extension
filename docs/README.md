@@ -57,9 +57,9 @@ Minimap Scroller uses an optimized render of the webpage, without images or heav
 
 The rendering is automatically updated when important elements change on the web page.
 
-3. **Minimized**
+3. **Always visible**
 
-Thanks to the strip, open the mini map only when you need it.
+The mini map is displayed automatically on every page without any extra action.
 
 
 
