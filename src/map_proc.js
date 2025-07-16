@@ -16,9 +16,11 @@ function init() {
 		document.body.appendChild(languette);
 
 		// Add minimap container to the page
-		const minimapContainer = document.createElement('div');
-		minimapContainer.id = 'dom-minimap-container';
-		document.body.appendChild(minimapContainer);
+                const minimapContainer = document.createElement('div');
+                minimapContainer.id = 'dom-minimap-container';
+                document.body.appendChild(minimapContainer);
+                // Keep minimap visible by default
+                minimapContainer.style.right = '0px';
 		
 		// Scrollbox canvas
 		const canvass = document.createElement('canvas');
@@ -159,24 +161,14 @@ function init() {
 			isDragging = false;
 		};
 
-		// Add event listeners for canvas
-		languette.addEventListener('mouseover', e => {
-			minimapContainer.style.right = '0px';
-		});
-		canvass.addEventListener('mouseout', e => {
-			minimapContainer.style.right = '-101px';
-		});
-		canvass.addEventListener('mousedown', handleMouseDown);
-		canvass.addEventListener('mousemove', handleMouseMove);
-		canvass.addEventListener('mouseup', handleMouseUp);
-		canvass.addEventListener('mouseleave', handleMouseUp);
-		document.getElementById('languette').addEventListener('mouseenter', function (e) {
-			scheduleRender(true);
-		});
-		document.addEventListener("mouseleave", function(event) {
-			if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight))
-				minimapContainer.style.right = '-101px';
-		});
+                // Keep minimap visible at all times
+                canvass.addEventListener('mousedown', handleMouseDown);
+                canvass.addEventListener('mousemove', handleMouseMove);
+                canvass.addEventListener('mouseup', handleMouseUp);
+                canvass.addEventListener('mouseleave', handleMouseUp);
+                document.getElementById('languette').addEventListener('mouseenter', function (e) {
+                        scheduleRender(true);
+                });
 
 
 		// Schedule render based on DOM mutation
