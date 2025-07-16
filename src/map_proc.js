@@ -9,16 +9,11 @@ function init() {
 		let lastRenderTime = 0;
 		let renderUID = 0;
 		
-		// Add languette
-		const languette = document.createElement('div');
-		languette.id = 'languette';
-		languette.innerText = 'Minimap';
-		document.body.appendChild(languette);
-
-		// Add minimap container to the page
-		const minimapContainer = document.createElement('div');
-		minimapContainer.id = 'dom-minimap-container';
-		document.body.appendChild(minimapContainer);
+                // Add minimap container to the page
+                const minimapContainer = document.createElement('div');
+                minimapContainer.id = 'dom-minimap-container';
+                document.body.appendChild(minimapContainer);
+                minimapContainer.style.right = '0px';
 		
 		// Scrollbox canvas
 		const canvass = document.createElement('canvas');
@@ -159,24 +154,11 @@ function init() {
 			isDragging = false;
 		};
 
-		// Add event listeners for canvas
-		languette.addEventListener('mouseover', e => {
-			minimapContainer.style.right = '0px';
-		});
-		canvass.addEventListener('mouseout', e => {
-			minimapContainer.style.right = '-101px';
-		});
-		canvass.addEventListener('mousedown', handleMouseDown);
-		canvass.addEventListener('mousemove', handleMouseMove);
-		canvass.addEventListener('mouseup', handleMouseUp);
-		canvass.addEventListener('mouseleave', handleMouseUp);
-		document.getElementById('languette').addEventListener('mouseenter', function (e) {
-			scheduleRender(true);
-		});
-		document.addEventListener("mouseleave", function(event) {
-			if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight))
-				minimapContainer.style.right = '-101px';
-		});
+                // Add event listeners for canvas
+                canvass.addEventListener('mousedown', handleMouseDown);
+                canvass.addEventListener('mousemove', handleMouseMove);
+                canvass.addEventListener('mouseup', handleMouseUp);
+                canvass.addEventListener('mouseleave', handleMouseUp);
 
 
 		// Schedule render based on DOM mutation
@@ -229,16 +211,18 @@ function init() {
 		});
 
 		// Adjust canvas size on window resize
-		window.addEventListener('resize', () => {
-			scheduleRender();
-		});
-	});
+                window.addEventListener('resize', () => {
+                        scheduleRender();
+                });
+
+                // Initial render
+                scheduleRender(true);
+        });
 }
 
 function desinit() {
-	if (document.body.contains(document.getElementById('dom-minimap-container'))) {
-		document.getElementById('dom-minimap-container').remove();
-		document.getElementById('languette').remove();
-		observer.disconnect();
-	}
+        if (document.body.contains(document.getElementById('dom-minimap-container'))) {
+                document.getElementById('dom-minimap-container').remove();
+                observer.disconnect();
+        }
 }
