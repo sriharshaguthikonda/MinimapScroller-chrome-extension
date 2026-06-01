@@ -1,0 +1,46 @@
+﻿{
+    "schemaVersion":  "repo-map-artifact-branch/v1",
+    "repo":  "sriharshaguthikonda/MinimapScroller-chrome-extension",
+    "generatedAt":  "2026-06-01T06:06:06.1624022Z",
+    "source":  "Repo_maps GitHub footprint publish runner",
+    "publishBranch":  "repo-intel-artifacts",
+    "mapCount":  5,
+    "totalBytes":  213252,
+    "maps":  [
+                 {
+                     "name":  "codex/enable-minimap-by-default",
+                     "ref":  "refs/remotes/origin/codex/enable-minimap-by-default",
+                     "commit":  "c463a6d4c7ed01475bd8ab5af803264dacf50cbe",
+                     "path":  ".repo-intel/branches/remote-origin/codex-enable-minimap-by-default__c463a6d4c7ed/repo-map-full.json",
+                     "bytes":  39590
+                 },
+                 {
+                     "name":  "main",
+                     "ref":  "refs/remotes/origin/main",
+                     "commit":  "08f97bc0bdbabc9f9af59dd990daf5d1d0569683",
+                     "path":  ".repo-intel/branches/remote-origin/main__08f97bc0bdba/repo-map-full.json",
+                     "bytes":  39757
+                 },
+                 {
+                     "name":  "n4jf1m-codex/enable-minimap-by-default",
+                     "ref":  "refs/remotes/origin/n4jf1m-codex/enable-minimap-by-default",
+                     "commit":  "07dbd728093cbd0a7b055f4acc584e7bbe7e88ea",
+                     "path":  ".repo-intel/branches/remote-origin/n4jf1m-codex-enable-minimap-by-default__07dbd728093c/repo-map-full.json",
+                     "bytes":  38799
+                 },
+                 {
+                     "name":  "rbajo2-codex/enable-minimap-by-default",
+                     "ref":  "refs/remotes/origin/rbajo2-codex/enable-minimap-by-default",
+                     "commit":  "f0ff6137da29ca534db4ab1bb74aa43d5f32497e",
+                     "path":  ".repo-intel/branches/remote-origin/rbajo2-codex-enable-minimap-by-default__f0ff6137da29/repo-map-full.json",
+                     "bytes":  39224
+                 },
+                 {
+                     "name":  "main",
+                     "ref":  "refs/remotes/upstream/main",
+                     "commit":  "08f97bc0bdbabc9f9af59dd990daf5d1d0569683",
+                     "path":  ".repo-intel/branches/remote-upstream/main__08f97bc0bdba/repo-map-full.json",
+                     "bytes":  39757
+                 }
+             ]
+}
